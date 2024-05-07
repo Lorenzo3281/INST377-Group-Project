@@ -2,5 +2,3 @@ Our project is called "INST377 Movie Search Group Project". This project is by u
 
 
 
-
-Link to Developer Manual
