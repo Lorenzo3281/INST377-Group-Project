@@ -1,13 +1,17 @@
-.links{
-    background: lightcoral;
-    width: 100%;
-    padding: 5px;
+#PageNavigation {
+    background-color: #D64933;
     text-align: center;
 }
-
-#links-hover:hover {
-    background-color: green;
-    color: pink;
+#PageNavigation a{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    font-size: large;
+}
+#PageNavigation a:hover {
+    background-color: white;
+    color: black;
 }
 
 .submit-button {
