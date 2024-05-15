@@ -9,3 +9,20 @@
     background-color: green;
     color: pink;
 }
+
+.submit-button {
+    background: #2da90a;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    text-shadow: none;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    text-shadow: none;
+}
