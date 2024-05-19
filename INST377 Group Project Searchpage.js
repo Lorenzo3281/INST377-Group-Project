@@ -5,10 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchGenres() {
-  const apiKey = '72797a9086db2d02568944a6a04a121a';
-  const apiUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`;
+  const apiUrl = 'https://api.themoviedb.org/3/genre/movie/list?language=en-US';
+  const headers = {
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Mjc5N2E5MDg2ZGIyZDAyNTY4OTQ0YTZhMDRhMTIxYSIsInN1YiI6IjY2NDkzZmYwOTViZDRhNGJjMDhlODA2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Occ8Up6_4yLg4OMh-RtcpOUQyO7YZfO5lkfpAt-1q-A',
+    'Content-Type': 'application/json;charset=utf-8'
+  };
 
-  fetch(apiUrl)
+  fetch(apiUrl, { headers: headers })
     .then(response => response.json())
     .then(data => {
       data.genres.forEach(genre => {
@@ -28,12 +31,16 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 });
 
 function searchMovies(movieName) {
-  const apiKey = '72797a9086db2d02568944a6a04a121a';
-  const apiUrl = `https://api.themoviedb.org/3/search/movie?query=${movieName}&api_key=${apiKey}`;
+  const apiUrl = `https://api.themoviedb.org/3/search/movie?query=${movieName}`;
+  const headers = {
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Mjc5N2E5MDg2ZGIyZDAyNTY4OTQ0YTZhMDRhMTIxYSIsInN1YiI6IjY2NDkzZmYwOTViZDRhNGJjMDhlODA2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Occ8Up6_4yLg4OMh-RtcpOUQyO7YZfO5lkfpAt-1q-A',
+    'Content-Type': 'application/json;charset=utf-8'
+  };
+
   document.getElementById('loadingMessage').classList.remove('hidden');
   document.getElementById('resultsTable').classList.add('hidden');
 
-  fetch(apiUrl)
+  fetch(apiUrl, { headers: headers })
     .then(response => response.json())
     .then(data => {
       if (data.results.length > 0) {
