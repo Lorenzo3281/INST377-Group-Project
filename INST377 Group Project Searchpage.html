@@ -9,17 +9,19 @@
     <script src="INST377 Group Project Searchpage.js" defer></script>
 </head>
 
-<body style="background-color:#c1be23">
+<body style="background-color: #62c123">
     <h1>Movie Search</h1>
     <div id="PageNavigation">
         <a href="INST377 Group Project Homepage.html">Home</a>
         <a href="INST377 Group Project Searchpage.html">Search</a>
         <a href="INST377 Group Project Aboutpage.html">About</a>
     </div>
+    <div id="sc">
     <form id="searchForm" onsubmit="return false;">
         <label for="movie">Enter a movie title:</label>
         <input type="text" id="movie" placeholder="Enter a movie title..." required>
         <button type="submit" class="submit-button">Lookup!</button>
+    </div>
     </form>
     <p id="loadingMessage" class="hidden">Loading...</p>
     <table id="resultsTable" class="hidden">

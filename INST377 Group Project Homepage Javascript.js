@@ -111,8 +111,9 @@ function displayTrendingPeople(people) {
         }
     });
 }
-function fetchtoprated() {
-    fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", {
+
+async function fetchToprated() {
+    await fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", {
         headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2Njk4MWVhY2Q1MzNmZGE1MTQ0MjJmYjhiNTg2YzExYyIsInN1YiI6IjY2NDU0MDAzY2M2ZWUyNmVmZDVjYTEwOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ok2hDpRa1efANtr1GqM83v6uBTPL_60oFizxrTHxYHI"
@@ -133,10 +134,47 @@ function fetchtoprated() {
     });
 }
 
+async function displayTopratedChart(){
+    const data= await fetchToprated();
+    if( data.length > 0) {
+    console.log(data)
+     titles =[];
+     votes = [];
+    };
+
+      data.forEach(rated =>{
+        titles.push(rated.title)
+        votes.push(rated.vote_count)
+
+            })
+            const ctx = document.getElementById('myChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: titles,
+                  datasets: [{
+                    label: 'Popularity Votes',
+                    data: votes,
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+           
+      
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchMoviesNowPlaying();
     fetchTrendingMovies();
     fetchUpcomingMovies();
     fetchTrendingPeople();
+    fetchToprated();
 });
