@@ -1,3 +1,7 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 #PageNavigation {
     background-color: #D64933;
     text-align: center;
@@ -16,7 +20,7 @@
 
 
 
-.TopMoviesOf2024{
+.NowPlayingMovies, .TrendingMovies, .UpcomingMovies, .TrendingPeople {
     border-radius: 10px;
     background: rgb(193, 105, 105);
     padding: 20px;
@@ -27,13 +31,6 @@
     margin: 10px;
 }
 
-.TopGrossingMovies{
-    border-radius: 10px;
-    background: rgb(193, 105, 105);
-    padding: 20px;
-    width: 45%;
-    height: 500px;
-    position: relative;
-    float: right;
-    margin: 10px;
+.NowPlayingMovies h2, .TrendingMovies h2, .UpcomingMovies h2, .TrendingPeople h2 {
+    text-align: center;
 }
