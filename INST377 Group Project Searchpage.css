@@ -34,3 +34,8 @@
 .hidden {
     display: none;
 }
+
+table ,tr,td{
+    border:1 px solid
+
+}
