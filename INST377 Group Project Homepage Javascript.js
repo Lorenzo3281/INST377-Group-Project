@@ -155,15 +155,32 @@ async function displayTopratedChart(top){
                   datasets: [{
                     label: 'Popularity Votes',
                     data: votes,
-                    borderWidth: 1
+                    backgroundColor: [
+                        '#E9967A'
+                    ],
+                    borderColor: [
+                        '#000000'
+                    ],
+                    color: [
+                        '#000000'  
+                    ],
+                    borderWidth: 1,
+                    
                   }]
                 },
                 options: {
                   scales: {
+                    x: {
+                        ticks: {
+                            color: '#000000' // Color for x-axis labels
+                        }
+                    },
                     y: {
-                      beginAtZero: true
+                        ticks: {
+                            color: '#000000' // Color for y-axis labels
+                        }
                     }
-                  }
+                },
                 }
               });
            
