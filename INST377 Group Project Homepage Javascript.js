@@ -134,22 +134,22 @@ async function fetchToprated() {
     });
 }
 
-async function displayTopratedChart(){
-    const data= await fetchToprated();
-    if( data.length > 0) {
-    console.log(data)
+async function displayTopratedChart(top){
+    
+    if( top.length > 0) {
+    console.log(top)
      titles =[];
      votes = [];
     };
 
-      data.forEach(rated =>{
+      top.forEach(rated =>{
         titles.push(rated.title)
         votes.push(rated.vote_count)
 
             })
             const ctx = document.getElementById('myChart').getContext('2d');
             new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                   labels: titles,
                   datasets: [{
