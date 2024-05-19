@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
         <title>INST377 Group Project Homepage</title>
         <link rel=" stylesheet" href="INST377 Group Project Searchpage.css">
@@ -21,5 +21,43 @@
         </div>
         <div class="searchresult"></div>
     </body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="INST377 Group Project Searchpage.css">
+    <title>INST377 Group Project Homepage</title>
+    <script src="INST377 Group Project Searchpage.js" defer></script>
+</head>
+
+<body style="background-color:#c1be23">
+    <h1>Movie Search</h1>
+    <div id="PageNavigation">
+        <a href="INST377 Group Project Homepage.html">Home</a>
+        <a href="INST377 Group Project Searchpage.html">Search</a>
+        <a href="INST377 Group Project Aboutpage.html">About</a>
+    </div>
+    <form id="searchForm" onsubmit="return false;">
+        <label for="movie">Enter a movie title:</label>
+        <input type="text" id="movie" placeholder="Enter a movie title..." required>
+        <button type="submit" class="submit-button">Lookup!</button>
+    </form>
+    <p id="loadingMessage" class="hidden">Loading...</p>
+    <table id="resultsTable" class="hidden">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+    </table>
+</body>
 
 </html>
