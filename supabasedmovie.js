@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'))
 
 
 const supabaseUrl = 'https://tqfptifcqulmmrwpeiyg.supabase.co'
-const supabaseKey ='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Mjc5N2E5MDg2ZGIyZDAyNTY4OTQ0YTZhMDRhMTIxYSIsInN1YiI6IjY2NDkzZmYwOTViZDRhNGJjMDhlODA2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Occ8Up6_4yLg4OMh-RtcpOUQyO7YZfO5lkfpAt-1q-A'
+const supabaseKey ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxZnB0aWZjcXVsbW1yd3BlaXlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYxMzIzNjgsImV4cCI6MjAzMTcwODM2OH0.piB_lRWzBBHzuRPTalauk6wIfTSWybbELJ81q9V8qYA'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
 app.get('/', (req,res) =>{
