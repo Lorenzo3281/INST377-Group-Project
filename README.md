@@ -128,7 +128,7 @@ Develop backend APIs for managing poster data.
 Implement frontend components for uploading and displaying posters.
 Integrate poster management functionality with existing movie data.
 ## Trending Genres:
-**Description:**Implement a feature to showcase trending movie genres based on user interactions or external data sources.
+**Description:** Implement a feature to showcase trending movie genres based on user interactions or external data sources.
 Expected Features:
 Algorithm for determining trending genres.
 User interface for displaying trending genres.
