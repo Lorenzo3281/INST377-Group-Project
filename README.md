@@ -118,7 +118,7 @@ Research and select a suitable JavaScript library for video playback.
 Develop a user interface for video upload and playback.
 Integrate video functionality into the application's backend and frontend.
 ## Poster Management:
-Description: Enhance the application to manage movie posters, potentially implementing features like a poster slider or allowing users to upload movie posters.
+**Description:** Enhance the application to manage movie posters, potentially implementing features like a poster slider or allowing users to upload movie posters.
 **Expected Features:****
 Poster upload functionality.
 Slider component for displaying movie posters.
@@ -128,7 +128,7 @@ Develop backend APIs for managing poster data.
 Implement frontend components for uploading and displaying posters.
 Integrate poster management functionality with existing movie data.
 ## Trending Genres:
-Description: Implement a feature to showcase trending movie genres based on user interactions or external data sources.
+**Description:**Implement a feature to showcase trending movie genres based on user interactions or external data sources.
 Expected Features:
 Algorithm for determining trending genres.
 User interface for displaying trending genres.
