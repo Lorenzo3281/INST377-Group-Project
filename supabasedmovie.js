@@ -14,8 +14,9 @@ const supabaseKey ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSI
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
 app.get('/', (req,res) =>{
-    res.sendfile('INST377-Movie-Search-Group-Project\public\INST377 Group Project Homepage.html',{root:__dirname})
+    res.sendfile('public/INST377 Group Project Homepage.html',{root:__dirname})
 })
+
 
  app.get('/profiles', async (req, res) => {
     console.log('Attempting to get all movie user Profiles')

@@ -5,7 +5,7 @@ async function loadprofile(){
     .then((res) => res.json())
     .then((res) =>{
         console.log(res)
-    var tablehe
+    
     })
 
 }
