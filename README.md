@@ -82,13 +82,13 @@ Content-Type: application/json
 }
 
 
- Dependencies: The application requires the @supabase/supabase-js library for interacting with Supabase, as well as body-parser and express.
+ #Dependencies: The application requires the @supabase/supabase-js library for interacting with Supabase, as well as body-parser and express.
 
 Server Setup: You initialize your Express application, set up middleware for parsing JSON bodies (body-parser), and serve static files from a directory named public.
 
 Supabase Configuration:  Define the URL and API key for your Supabase instance and create a Supabase client.
 
-Routes:
+#Routes:
 
 GET /: Serves an HTML file located at public/INST377 Group Project Homepage.html.
 GET /profiles: Retrieves all movie user profiles from the Supabase database.
