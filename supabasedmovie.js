@@ -12,6 +12,11 @@ app.use(express.static(__dirname + '/public'))
 const supabaseUrl = 'https://tqfptifcqulmmrwpeiyg.supabase.co'
 const supabaseKey ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRxZnB0aWZjcXVsbW1yd3BlaXlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYxMzIzNjgsImV4cCI6MjAzMTcwODM2OH0.piB_lRWzBBHzuRPTalauk6wIfTSWybbELJ81q9V8qYA'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
+
+app.get('/', (req,res) =>{
+    res.sendfile('public/C:\Users\ceeja\Desktop\INST377\INST377-Movie-Search-Group-Project\public\INST377 Group Project Homepage.html',{root:__dirname})
+})
+
  app.get('/profiles', async (req, res) => {
     console.log('Attempting to get all movie user Profiles')
     const { data, error } = await supabase

@@ -1,7 +1,14 @@
-function loadprofile
-
-
-
-window.onload{
+async function loadprofile(){
+    var host = window.location.origin;
+    console.log(host)
+    await fetch( `${host}/profile`)
+    .then((res) => res.json())
+    .then((res) =>{
+        console.log(res)
+    })
 
 }
+
+
+
+window.onload = loadprofile
