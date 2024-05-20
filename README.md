@@ -58,7 +58,7 @@ GET /profiles:
     Response: JSON array containing user profiles.
 POST /profile:
 
-Description: Adds a new movie user profile to the Supabase database.
+# Description: Adds a new movie user profile to the Supabase database.
 Request Body:
 firstname (string): First name of the user.
 lastname (string): Last name of the user.
@@ -68,7 +68,7 @@ Response: JSON object containing the inserted profile data if successful; error 
 Example Usage:
 
 
-Example Usage:
+# Example Usage:
 To retrieve all profiles: GET /profiles
 To add a new profile:
 POST /profile
@@ -82,18 +82,61 @@ Content-Type: application/json
 }
 
 
- #Dependencies: The application requires the @supabase/supabase-js library for interacting with Supabase, as well as body-parser and express.
+ # Dependencies: The application requires the @supabase/supabase-js library for interacting with Supabase, as well as body-parser and express.
 
 Server Setup: You initialize your Express application, set up middleware for parsing JSON bodies (body-parser), and serve static files from a directory named public.
 
 Supabase Configuration:  Define the URL and API key for your Supabase instance and create a Supabase client.
 
-#Routes:
+# Routes:
 
 GET /: Serves an HTML file located at public/INST377 Group Project Homepage.html.
 GET /profiles: Retrieves all movie user profiles from the Supabase database.
 POST /profile: Adds a new movie user profile to the Supabase database. It expects JSON data in the request body containing firstname, lastname, email, and movie. Before inserting the profile, it validates the email using the email-validator library.
 Server Start: The application listens on port 3000, and once started, it logs a message confirming that the server is running.
+
+
+# Future Developments: 
+## Known Bugs:
+Email Validation Issue:
+
+Description: The email validation might not cover all edge cases or may not be functioning as expected.
+Expected Resolution: Review and enhance email validation to ensure it covers a wider range of valid email formats and edge cases.
+Error Handling and Logging:
+
+Description: Error handling and logging mechanisms might be insufficient, leading to potential issues being unnoticed.
+Expected Resolution: Implement robust error handling throughout the application, including logging errors to facilitate troubleshooting.
+Roadmap for Future Development:
+## Video Integration:
+Description: Allow users to add video trailers of movies, possibly using a JavaScript library for video playback.
+### Expected Features:
+Video upload functionality.
+Integration with a video clip JavaScript library for playback.
+Display of video trailers on movie detail pages.
+Implementation Steps:
+Research and select a suitable JavaScript library for video playback.
+Develop a user interface for video upload and playback.
+Integrate video functionality into the application's backend and frontend.
+## Poster Management:
+Description: Enhance the application to manage movie posters, potentially implementing features like a poster slider or allowing users to upload movie posters.
+**Expected Features:****
+Poster upload functionality.
+Slider component for displaying movie posters.
+User interface for managing and uploading posters.
+Implementation Steps:
+Develop backend APIs for managing poster data.
+Implement frontend components for uploading and displaying posters.
+Integrate poster management functionality with existing movie data.
+## Trending Genres:
+Description: Implement a feature to showcase trending movie genres based on user interactions or external data sources.
+Expected Features:
+Algorithm for determining trending genres.
+User interface for displaying trending genres.
+Dynamic updating of trending genres based on user interactions.
+**Implementation Steps:**
+Define criteria for determining trending genres (e.g., viewing history, user ratings).
+Develop backend logic to analyze data and determine trending genres.
+Implement frontend components to display trending genres. 
 
 
 
