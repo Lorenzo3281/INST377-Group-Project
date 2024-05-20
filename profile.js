@@ -1,0 +1,7 @@
+function loadprofile
+
+
+
+window.onload{
+
+}

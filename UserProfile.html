@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>INST377 Group Project Homepage</title>
+        <link rel=" stylesheet" href="INST377 Group Project Homepage Stylesheet.css">
+        <script src="INST377 Group Project Homepage Javascript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body style= "background-color:#62c123">
+            <div id="PageNavigation">
+                <p>
+                    <a href="INST377 Group Project Homepage.html">Home</a> 
+                    <a href="INST377 Group Project Searchpage.html">Search</a> 
+                    <a href="INST377 Group Project Aboutpage.html">About</a>
+                    <a href="UserProfile.html">
+                        <img src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-user-outline-vector-icon--social-icons--icons-download-26.png" alt="User Profile Image"alt="User Profile Image" style="width: 50px; height: 35px;">
+                    </a>
+                </p>
+            </div>
+    <h1>
+        User profile Submission.
+    </h1>
+    <div id = userprof>
+    <form onsubmit="createprofile(); return false" method="post">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="FavoriteMovie">Favorite Movie:</label><br>
+        <input type="text" id="favoriteMovie" name="favoriteMovie" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </div>
+    </form>
+</body>
+</html>

@@ -39,3 +39,7 @@ li{
 .NowPlayingMovies h2, .TrendingMovies h2, .UpcomingMovies h2, .TrendingPeople h2 {
     text-align: center;
 }
+
+#userprof{
+    color: black;
+}
